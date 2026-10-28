@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[YOUR NAME] — Portfolio</title>
+  <meta name="description" content="Personal portfolio: about, education, projects, achievements, activities and future goals.">
+  <meta name="theme-color" content="#f3f1ec">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cube-bg.css">
+</head>
+<body data-page="home" id="top">
+  <div id="cube-bg" aria-hidden="true">
+  <canvas id="stars"></canvas>
+
+  <svg class="orbits" viewBox="0 0 1600 900" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="og1" x1="0" x2="1"><stop offset="0" stop-color="#ffb43a" stop-opacity=".9"/><stop offset="1" stop-color="#4f8dff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="og2" x1="0" x2="1"><stop offset="0" stop-color="#4f8dff" stop-opacity="0"/><stop offset=".6" stop-color="#6fa6ff" stop-opacity=".8"/><stop offset="1" stop-color="#4f8dff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g fill="none" stroke-width="1.5">
+      <ellipse cx="330" cy="260" rx="260" ry="95" transform="rotate(-22 330 260)" stroke="url(#og1)" stroke-dasharray="520 700"/>
+      <ellipse cx="900" cy="250" rx="330" ry="110" transform="rotate(-12 900 250)" stroke="url(#og2)" stroke-dasharray="620 900"/>
+      <ellipse cx="1400" cy="640" rx="260" ry="120" transform="rotate(28 1400 640)" stroke="url(#og2)" stroke-dasharray="500 800"/>
+      <ellipse cx="200" cy="520" rx="300" ry="70" transform="rotate(6 200 520)" stroke="url(#og1)" stroke-opacity=".5" stroke-dasharray="380 900"/>
+    </g>
+  </svg>
+
+  <div id="cubes"></div>
+
+  <p class="cbg-tag" style="left:12%;top:14%">Better Ideas</p>
+  <p class="cbg-tag" style="left:55%;top:14%">Think Explore Build</p>
+  <p class="cbg-tag" style="left:30%;top:67%">More Context Less Misinformation</p>
+  <p class="cbg-tag" style="right:65%;top:12%">Small Steps Big Dreams</p>
+  <p class="cbg-tag" style="right:25%;top:75%;max-width:none">What if …?</p>
+</div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-copy">
+          <p class="eyebrow">Personal portfolio</p>
+          <h1 id="home-title"><span data-bind="site.name">[YOUR NAME]</span></h1>
+          <p class="tagline" data-bind="site.tagline">[YOUR TAGLINE]</p>
+          <p class="intro" data-bind="site.intro">[YOUR INTRODUCTION]</p>
+
+          <p class="hint">
+            <span aria-hidden="true">↻</span>
+            <span><strong>Turn the cube</strong> by dragging it, then <strong>click a face</strong> to open that page.
+            With a keyboard, focus the cube and use <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd>.</span>
+          </p>
+
+          <nav class="quick-nav" aria-labelledby="quick-nav-title">
+            <h2 id="quick-nav-title">Or jump straight to</h2>
+            <ul id="quick-nav-list">
+              <!-- Filled by js/home.js; static fallback below for no-JS visitors -->
+              <noscript>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="goals.html">Future Goals</a></li>
+              </noscript>
+            </ul>
+          </nav>
+
+          <a class="scroll-cue" href="#faces">Scroll</a>
+        </div>
+
+        <div class="home-stage">
+          <div class="cube-scene" id="cube-scene" role="group" tabindex="0"
+               aria-label="Interactive cube. Each face opens a section of the portfolio. Use the arrow keys to turn it and Enter to open the face in front."></div>
+
+          <div class="cube-controls" role="group" aria-label="Cube rotation controls">
+            <button type="button" data-cube-dir="reset" aria-label="Reset cube view">Reset</button>
+            <button type="button" data-cube-dir="up" aria-label="Rotate cube up"><span aria-hidden="true">↑</span></button>
+            <button type="button" data-cube-dir="left" aria-label="Rotate cube left"><span aria-hidden="true">←</span></button>
+            <button type="button" data-cube-dir="down" aria-label="Rotate cube down"><span aria-hidden="true">↓</span></button>
+            <button type="button" data-cube-dir="right" aria-label="Rotate cube right"><span aria-hidden="true">→</span></button>
+          </div>
+
+          <p class="cube-status" id="cube-status"></p>
+          <p class="sr-only" id="cube-live" aria-live="polite"></p>
+          <noscript><p class="no-js-note">The interactive cube needs JavaScript. The links above still take you to every section.</p></noscript>
+        </div>
+      </section>
+
+      <section class="index-section" id="faces" aria-labelledby="faces-title">
+        <h2 id="faces-title">Six faces, six pages</h2>
+        <ul class="index-list" id="index-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/cube-bg.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/cube.js"></script>
+</body>
+</html>

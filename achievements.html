@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="theme-color" content="#f3f1ec">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cube-bg.css">
+</head>
+<body data-page="achievements" id="top">
+  <div id="cube-bg" aria-hidden="true">
+  <canvas id="stars"></canvas>
+
+  <svg class="orbits" viewBox="0 0 1600 900" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="og1" x1="0" x2="1"><stop offset="0" stop-color="#ffb43a" stop-opacity=".9"/><stop offset="1" stop-color="#4f8dff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="og2" x1="0" x2="1"><stop offset="0" stop-color="#4f8dff" stop-opacity="0"/><stop offset=".6" stop-color="#6fa6ff" stop-opacity=".8"/><stop offset="1" stop-color="#4f8dff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g fill="none" stroke-width="1.5">
+      <ellipse cx="330" cy="260" rx="260" ry="95" transform="rotate(-22 330 260)" stroke="url(#og1)" stroke-dasharray="520 700"/>
+      <ellipse cx="900" cy="250" rx="330" ry="110" transform="rotate(-12 900 250)" stroke="url(#og2)" stroke-dasharray="620 900"/>
+      <ellipse cx="1400" cy="640" rx="260" ry="120" transform="rotate(28 1400 640)" stroke="url(#og2)" stroke-dasharray="500 800"/>
+      <ellipse cx="200" cy="520" rx="300" ry="70" transform="rotate(6 200 520)" stroke="url(#og1)" stroke-opacity=".5" stroke-dasharray="380 900"/>
+    </g>
+  </svg>
+
+  <div id="cubes"></div>
+
+  <p class="cbg-tag" style="left:12%;top:14%">Better Ideas</p>
+  <p class="cbg-tag" style="left:55%;top:14%">Think Explore Build</p>
+  <p class="cbg-tag" style="left:30%;top:67%">More Context Less Misinformation</p>
+  <p class="cbg-tag" style="right:65%;top:12%">Small Steps Big Dreams</p>
+  <p class="cbg-tag" style="right:25%;top:75%;max-width:none">What if …?</p>
+</div>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <noscript><div class="wrap"><p class="no-js-note">This page's content is loaded with JavaScript. Please enable it, or open <a href="index.html">the homepage</a>.</p></div></noscript>
+    <div class="content" id="content"></div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/cube-bg.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/render.js"></script>
+</body>
+</html>
